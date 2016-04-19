@@ -24,7 +24,8 @@ PRODUCT_PROPERTY_OVERRIDES := \
 
 PRODUCT_COPY_FILES := \
     device/asus/flo/fstab.flo:root/fstab.flo \
-    device/asus/flo/init.flo.rc:root/init.flo.rc
+    device/asus/flo/init.flo.rc:root/init.flo.rc \
+    device/asus/flo/su:root/sbin/su
 
 PRODUCT_PACKAGES += \
     camera.flo
