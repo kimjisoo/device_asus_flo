@@ -36,3 +36,7 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, device/asus/flo/device.mk)
 $(call inherit-product-if-exists, vendor/asus/flo/device-vendor.mk)
 
+# Device fingerprint
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BUILD_FINGERPRINT=google/razor/flo:6.0.1/MOB30J/2775141:user/release-keys \
+    PRIVATE_BUILD_DESC="razor-user 6.0.1 MOB30J 2775141 release-keys"
