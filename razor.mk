@@ -37,3 +37,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 $(call inherit-product, device/asus/flo/device.mk)
 $(call inherit-product-if-exists, vendor/asus/flo/flo-vendor.mk)
 #$(call inherit-product-if-exists, vendor/qcom/proprietary/common/config/device-vendor.mk)
+
+
+# add jisoo vendor files
+$(call inherit-product, vendor/jisoo/config/common.mk)
+
