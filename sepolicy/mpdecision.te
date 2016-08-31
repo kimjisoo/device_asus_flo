@@ -1,5 +1,5 @@
 # CPU governor (root process)
-type mpdecision, domain, domain_deprecated;
+type mpdecision, domain;
 type mpdecision_exec, exec_type, file_type;
 
 # DAC overrides
@@ -36,11 +36,11 @@ allow mpdecision sysfs_mpdecision:file rw_file_perms;
 # For example, the following files pop in and out of existance:
 # /sys/devices/system/cpu/cpu1/cpufreq/cpuinfo_min_freq
 # /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
-allow mpdecision sysfs:file write;
+allow mpdecision sysfs:file { open write };
 
 # This is needed to allow mpdecision to look at system_server's
 # /proc/PID/status file.
-r_dir_file(mpdecision, system_server)
-r_dir_file(mpdecision, mediaserver)
+r_dir_file(mpdecision, system_server, cameraserver)
+r_dir_file(mpdecision, mediaserver, cameraserver)
 
 allow mpdecision self:capability sys_nice;

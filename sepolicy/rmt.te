@@ -1,5 +1,5 @@
 # remote storage process (runs as nobody)
-type rmt, domain, domain_deprecated;
+type rmt, domain;
 type rmt_exec, exec_type, file_type;
 
 # Started by init
@@ -23,9 +23,20 @@ allow rmt cgroup:dir { create add_name };
 
 # Wake lock access
 wakelock_use(rmt)
+allow rmt self:capability { dac_override setuid setgid setpcap net_raw sys_admin };
 
 # Allow access to /dev/uio0.
-allow rmt uio_device:chr_file rw_file_perms;
+allow rmt uio_device:chr_file { read write open create };
+allow rmt block_device:dir search;
+allow rmt uio_device:chr_file r_file_perms;
+allow rmt sysfs:file read;
+
+allow rmt sysfs_rmt:dir r_dir_perms;
+allow rmt sysfs_rmt:file rw_file_perms;
+allow rmt { sysfs sysfs_rmt }:filesystem associate;
+allow rmt sysfs_rmt:lnk_file read;
+allow rmt sysfs_rmt:dir read;
 
 # rmt_storage shuts itself down if there is an unknown value of ro.baseband
 set_prop(rmt, ctl_rmt_prop)
+
