@@ -128,3 +128,6 @@ USE_MINIKIN := true
 
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true
+
+# disable clang for bionic stuff to fix sensors
+USE_CLANG_BIONIC := false
