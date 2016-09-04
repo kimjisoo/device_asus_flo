@@ -1,4 +1,5 @@
 # Interact with sockets
+unix_socket_send(cameraserver, camera, camera)
 allow cameraserver camera:unix_dgram_socket sendto;
 allow cameraserver camera_data_file:sock_file write;
 allow cameraserver camera_socket:sock_file { open read write ioctl };
@@ -7,3 +8,6 @@ allow cameraserver init:unix_stream_socket connectto;
 
 allow cameraserver camera_device:chr_file { open read write ioctl };
 allow cameraserver cameraserver:fd use;
+
+unix_socket_send(cameraserver, mpdecision, mpdecision)
+allow cameraserver sysfs:file { getattr read open };

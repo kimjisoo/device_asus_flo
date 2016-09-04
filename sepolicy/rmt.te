@@ -36,6 +36,8 @@ allow rmt sysfs_rmt:file rw_file_perms;
 allow rmt { sysfs sysfs_rmt }:filesystem associate;
 allow rmt sysfs_rmt:lnk_file read;
 allow rmt sysfs_rmt:dir read;
+allow rmt sysfs:file { open append read getattr write };
+allow rmt sysfs:dir rw_dir_perms;
 
 # rmt_storage shuts itself down if there is an unknown value of ro.baseband
 set_prop(rmt, ctl_rmt_prop)
