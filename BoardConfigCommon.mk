@@ -138,3 +138,9 @@ TW_NO_SCREEN_BLANK := true
 TW_CUSTOM_BATTERY_PATH := /sys/devices/i2c-0/0-0055/power_supply/battery
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone0/temp
 TW_INCLUDE_MTP := true
+
+# disable clang for bionic stuff to fix sensors
+USE_CLANG_BIONIC := false
+
+# enable test relocations needed for closed camera libs
+TARGET_NEEDS_TEXT_RELOCATIONS := true
