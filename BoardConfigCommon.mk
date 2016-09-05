@@ -129,3 +129,7 @@ EXTENDED_FONT_FOOTPRINT := true
 
 # disable clang for bionic stuff to fix sensors
 USE_CLANG_BIONIC := false
+
+# enable test relocations needed for closed camera libs
+TARGET_NEEDS_TEXT_RELOCATIONS := true
+
