@@ -153,4 +153,8 @@
 /sys/devices/virtual/graphics/fb1/format_3d -- u:object_r:sysfs_surfaceflinger:s0
 /sys/devices/virtual/graphics/fb1/hpd       -- u:object_r:sysfs_surfaceflinger:s0
 
+/sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/gpuclk -- u:object_r:sysfs_gpuclk:s0
+/sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/max_gpuclk -- u:object_r:sysfs_gpuclk:s0
+
+
 /sys/class/uio/uio0(/.*)?		u:object_r:sysfs_rmt:s0
