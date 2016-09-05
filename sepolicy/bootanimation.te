@@ -1,0 +1,2 @@
+allow bootanim sysfs_gpuclk:file { open read getattr };
+

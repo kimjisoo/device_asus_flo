@@ -25,3 +25,4 @@ type sysfs_rmnet, fs_type, sysfs_type;
 type sysfs_mpdecision, fs_type, sysfs_type;
 type sysfs_surfaceflinger, fs_type, sysfs_type;
 type sysfs_rmt, fs_type, sysfs_type;
+type sysfs_gpuclk, fs_type, sysfs_type;
