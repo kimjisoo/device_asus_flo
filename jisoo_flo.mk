@@ -31,9 +31,9 @@ PRODUCT_MANUFACTURER := ASUS
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=jisoo_flo \
-    BUILD_FINGERPRINT=google/flo/flo:7.0.0/NRD90X/3142244:user/release-keys \
-    PRIVATE_BUILD_DESC="flo-user 7.0.0 NRD90X 3142244 release-keys" \
-    BUILD_ID=NRD90X
+    BUILD_FINGERPRINT=google/flo/flo:7.0.0/NRD91N/3318108:user/release-keys \
+    PRIVATE_BUILD_DESC="flo-user 7.0.0 NRD91N 3318108 release-keys" \
+    BUILD_ID=NRD91N
 
 $(call inherit-product, device/asus/flo/device.mk)
 $(call inherit-product-if-exists, vendor/asus/flo/device-vendor.mk)
