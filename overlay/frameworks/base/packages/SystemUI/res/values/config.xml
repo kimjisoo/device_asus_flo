@@ -34,5 +34,16 @@
     <bool name="doze_pulse_on_pick_up">true</bool>
     <!-- Doze: can we assume the pickup sensor includes a proximity check? -->
     <bool name="doze_pickup_performs_proximity_check">true</bool>
+
+    <!-- The number of columns in the QuickSettings -->
+    <integer name="quick_settings_num_columns">5</integer>
+
+    <!-- The number of rows in the QuickSettings -->
+    <integer name="quick_settings_num_rows">1</integer>
+    <integer name="quick_settings_num_rows_portrait">3</integer>
+
+    <!-- The number of columns that the top level tiles span in the QuickSettings -->
+    <integer name="quick_settings_user_time_settings_tile_span">2</integer>
+
 </resources>
 
